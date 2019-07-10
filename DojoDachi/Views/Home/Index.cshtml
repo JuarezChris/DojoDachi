@@ -1,0 +1,36 @@
+﻿<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/style.css"/>
+<div id="wrapper">
+@model Pet
+   
+     @{
+         @if(ViewBag.Fullness >= 50 && ViewBag.Happiness >= 50)
+         {
+            <h1>You Win</h1>
+             <a href="reset" class="btn btn-info" role="button">Reset</a>
+         }
+         @if(ViewBag.Fullness <= 0 || ViewBag.Happiness <= 0)
+         {
+             <h1>YOU LOSE</h1>
+              <a href="reset" class="btn btn-info" role="button">Reset</a>
+         }
+         else
+         {
+        <h3>Fullness:@ViewBag.Fullness Happiness:@ViewBag.Happiness  Meal:@ViewBag.Meal  Energy:@ViewBag.Energy  </h3>
+    <div class="main_box">
+        <h3>Dojo Dachi</h3>
+        <img src="~/images/ninjaPet2.png" height="200px" width="200px">
+        <p>@ViewBag.Message</p>
+    </div>
+    <div>
+        <a href="feed" class="btn btn-info" role="button">Feed</a>
+        
+        <a href="play" class="btn btn-info" role="button">Play</a>
+        <a href="work" class="btn btn-info" role="button">Work</a>
+        <a href="sleep" class="btn btn-info" role="button">Sleep</a>
+    </div> <br> 
+    <a href="reset" class="btn btn-info" role="button">Reset</a>
+         }
+     }
+
+ 

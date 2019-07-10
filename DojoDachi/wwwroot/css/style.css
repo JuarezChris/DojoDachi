@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(48, 52, 58);
+}
+#wrapper{
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
